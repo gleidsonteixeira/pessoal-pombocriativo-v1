@@ -1,0 +1,627 @@
+#topo{width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 1;}
+#topo .gatilho{line-height: 50px;font-size: 24px;width: 50px;height: 50px;margin: 10px;text-align: center;border-radius: 25px;color: white;}
+#topo .gatilho:hover{background-color: rgba(0,0,0,.15);}
+#topo .gatilho.active{background-color: white;color: #a933cb;}
+#topo .logo{width: 300px;height: 70px;position: absolute;top: 0;left: 70px;}
+#topo .logo img{width: 70px;display: block;float: left;}
+#topo .logo h3{width: 230px;float: left;line-height: 60px;color: white;font-size: 28px;font-weight: bold;margin-top:5px;margin-bottom:0;}
+#topo .logo h3 sup{font-size: 12px;color:white;display: inline-block;letter-spacing: 1px;margin-left: -5px;top: -14px;}
+#topo .perfil{width: 250px;height: 70px;position: absolute;top: 0;right: 0;}
+#topo .perfil::before{content: "";width: 1px;height: 40px;top: 15px;right: 100%;position: absolute;background-color: white;opacity: .5;}
+#topo .perfil img{width: 40px;height: 40px;position: absolute;top: 15px;right: 16px;border-radius: 20px;}
+#topo .perfil h6{color: white;float: right;margin-right: 72px;margin-top: 21px;}
+#topo .perfil h6 a{display: block;text-align: right;text-transform: none;color: white;}
+#topo nav{box-shadow: none;}
+#topo nav ul a{transition:none;padding:0;font-size: inherit;}
+#topo nav ul li.active,
+#topo nav ul a:hover{background-color: transparent;}
+#topo .menu{width: 70px;height: calc(100vh - 70px);position: absolute;bottom: 0;left: 0;}
+#topo .menu ul li{width: 70px;height: 40px;position: relative;margin-bottom: 6px;}
+#topo .menu ul li::before{content: "";width: 55px;height: 40px;background-color: rgba(255,255,255,.15);position: absolute;top: calc(50% - 20px);left: -55px;transition-duration: .2s;transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);border-radius: 0 20px 20px 0;z-index: -1;will-change: auto;}
+#topo .menu ul li.active::before,
+#topo .menu ul li:hover::before{left: 0;}
+#topo .menu ul li.active::before{background-color: white;}
+#topo .menu ul li.active::after{content: "";width: 10px;height: 20px;background-color: rgba(255,255,255,.25);position: absolute;top: calc(50% - 10px);right: 1px;border-radius: 10px 0 0 10px;}
+#topo .menu ul li a{width: 40px;height: 40px;text-align: center;display: block;margin: 0 15px;}
+#topo .menu ul li a i{color: white;line-height: 40px;font-size: 22px;display: block;position: relative;will-change: auto;}
+#topo .menu ul li.active a i{color: #a933cb;}
+#topo .menu ul li ul{width: 250px;height: calc(100vh - 70px);position: fixed;bottom: 0;left: 70px;display: none;}
+#topo .menu ul li.active ul{display: block;}
+#topo .menu ul li ul::before{content: "";width: 1px;height: calc(100% - 16px);background-color: rgba(255,255,255,.25);position: absolute;top: 0;right: 100%;}
+#topo .menu ul li ul li{width: 100%;}
+#topo .menu ul li ul li a{width: calc(100% - 16px);line-height: 40px;font-size: 14px;font-weight: bold;color: white;text-align: left;letter-spacing: 1px;display: block;border-radius: 4px;margin: 0;margin-left: 16px;padding: 0 12px;box-sizing: border-box;}
+#topo .menu ul li ul li a:hover{background-color: rgba(255,255,255,.15);}
+#topo .menu ul li ul li.active a{background-color: white;color: #a933cb;}
+#topo .menu ul li ul li::before,
+#topo .menu ul li ul li::after{display: none;}
+#topo .ajuda{position: absolute;top: 0;right: 250px;padding-right: 10px;}
+#topo .ajuda li{width: 40px;height: 40px;text-align: center;border-radius: 20px;float: left;margin: 15px 5px;}
+#topo .ajuda li:hover{background-color: rgba(255,255,255,.15);}
+#topo .ajuda li i{width: 40px;height: 40px;color: white;line-height: 40px;font-size: 22px;position: relative;}
+#topo .ajuda li i span{position: absolute;bottom: calc(50% + 3px);left: calc(50%);height: 15px;font-size: 10px;line-height: 15px;background-color: red;padding: 0 5px;border-radius: 10px;}
+
+#conteudo{width: calc(100% - 70px);height: calc(100% - 70px);background-color: white;position: fixed;bottom: 0;right: 0;overflow: auto;border-radius: 5px 0 0 0;z-index: 2;box-shadow: 0px 0px 25px 0px rgba(0,0,0,.3);padding: 16px;box-sizing: border-box;}
+#conteudo .propagandas{width: 218px;height: calc(100% - 32px);position: absolute;top: 16px;right: 16px;text-align: center;}
+#conteudo .propagandas::before{content: "";width: 1px;height: 100%;background-color: #a933cb;position: absolute;right: calc(100% + 16px);top: 0;opacity: .5;}
+#conteudo .propagandas img{height: 100%;border-radius: 5px;overflow: hidden;}
+
+#conteudo .config-inicial{width: 400px;}
+
+#conteudo.mini-menu{left: 70px;transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);}
+#conteudo.menu-active{width: calc(100% - 336px);}
+#conteudo .head-title{margin-bottom: 16px;}
+#conteudo .head-title select{width: 250px;float: right;margin-top: -12px;}
+#conteudo .mini-info{overflow: hidden;padding-bottom: 10px;}
+#conteudo .mini-info li{width: calc(25% - 12px);padding: 16px;border-radius: 5px;box-shadow: 0px 10px 15px -10px rgba(0,0,0,.3);font-size: 36px;float: left;margin-left: 16px;box-sizing: border-box;}
+#conteudo .mini-info li:first-of-type{margin-left: 0;}
+#conteudo .mini-info li.mini{width: calc(16% - 12px);}
+#conteudo .mini-info span{display: block;text-align: right;}
+#conteudo .table{width: 100%;display: table;position: relative;margin-bottom: 40px;}
+#conteudo .table .head-row,
+#conteudo .table .table-row{display: table-row;}
+#conteudo .table .table-row:nth-child(odd){background-color: rgba(0,0,0,.15);}
+#conteudo .table .foot-row{position: absolute;width: 100%;top: 100%;left: 0;border-radius: 0 0 5px 5px;}
+#conteudo .table .head-row h6,
+#conteudo .table .table-row h6{display: table-cell;line-height: 40px;padding: 0 6px;}
+#conteudo .table .head-row h6,
+#conteudo .table .foot-row h6{color: white;}
+#conteudo .table .head-row h6:first-child{border-radius: 5px 0 0 0;}
+#conteudo .table .head-row h6:last-child{border-radius: 0 5px 0 0;}
+#conteudo .table .foot-row h6{line-height: 40px;padding: 0 6px;}
+#conteudo .table .foot-row h6.passador{width: 160px;height: 40px;margin: 0 auto;padding: 0;}
+#conteudo .table .foot-row h6.passador i.prev,
+#conteudo .table .foot-row h6.passador i.next{width: 30px;line-height: 30px;font-size: 22px;color: white;display: block;float: left;text-align: center;margin: 5px;border-radius: 15px;}
+#conteudo .table .foot-row h6.passador i.prev:hover,
+#conteudo .table .foot-row h6.passador i.next:hover{background-color: rgba(0,0,0,.15);}
+#conteudo .table .foot-row h6.passador span{color: white;display: block;float: left;width: 80px;text-align: center;}
+
+
+#datacenter{overflow: hidden;margin-top: 16px;width: 100%;}
+#datacenter li{width: 20%;float: left;padding: 15px 10px;box-sizing: border-box;border-radius: 5px;}
+#datacenter li i{width: 80px;height: 80px;line-height: 80px;text-align:center;font-size: 80px;display: block;margin: 20px auto;color: #a933cb;}
+#datacenter li:hover{background-color: #a933cb;}
+#datacenter li:hover h6,
+#datacenter li:hover i{color: white;}
+
+#notificacoes ul{height: calc(100vh - 110px);margin: 0;}
+#notificacoes ul li{overflow: hidden;padding: 6px 0;}
+#notificacoes ul li p{overflow: hidden;font-size:12px;height: 70px;}
+#notificacoes ul li img{width: 100px;float: left;border-radius: 5px;margin-right: 8px;margin-top: 7px;}
+#notificacoes ul li h6 i{line-height: 13px;font-size: 16px;}
+
+/** BOXES LATERAIS **/
+
+
+#abrirChamado,
+#novaFaq,
+#novoCliente,
+#filtro,
+#notificacoes{
+    width: 350px;
+}
+#abrirChamado{padding-bottom: 74px;}
+#filtro input{
+    background-image: url("../img/lupa.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+#novoCliente ul{height: 230px;overflow: auto;}
+#novoCliente ul li{line-height: 40px;overflow: hidden;height: 40px;}
+#novoCliente ul li:nth-child(even){background-color: rgba(0,0,0,.15);}
+#novoCliente ul li input{float: left;margin-right: 16px;margin-top: 14px;margin-left: 16px;}
+#novoCliente ul li span{display: block;font-weight: bold;}
+
+
+/** CLASSES SOLTAS **/
+
+.faq-filter,
+.faq-filter:focus{
+    width: 250px;
+    position: absolute;
+}
+
+.resultado-interno,
+.resultado-externo{
+    width: 25%;
+    padding: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0px 10px 25px -8px rgba(0,0,0,.3);
+    margin-right: 16px;
+}
+.resultado-interno h2,
+.resultado-externo h2{
+    font-weight: lighter;
+}
+.grafico-container,
+.tabela-container{width: 50%;float: left;margin-top: 36px;}
+
+.observacoes table{margin-top: 26px;}
+
+.vendedorDe,
+.produtoDe,
+.estadoDe,
+.clienteDe{
+    width: 600px;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    right: 350px;
+    opacity: 0;
+    z-index: 15;
+    visibility: hidden;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.vendedorDe.active,
+.produtoDe.active,
+.estadoDe.active,
+.clienteDe.active{
+    opacity: 1;
+    top:0%;
+    visibility: visible;
+    z-index: 17;
+}
+.vendedorDe .box,
+.produtoDe .box,
+.estadoDe .box,
+.clienteDe .box{
+    box-sizing: border-box;
+    padding: 16px;
+}
+.vendedorDe h6,
+.produtoDe h6,
+.estadoDe h6,
+.clienteDe h6{
+    margin-bottom: 6px;
+    margin-top: 16px;
+}
+.vendedorDe h3 i,
+.produtoDe h3 i,
+.estadoDe h3 i,
+.clienteDe h3 i{
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+}
+.vendedorDe h3 i:hover,
+.produtoDe h3 i:hover,
+.estadoDe h3 i:hover,
+.clienteDe h3 i:hover{
+    background-color: rgba(0,0,0,.15);
+}
+.vendedorDe ul,
+.produtoDe ul,
+.estadoDe ul,
+.clienteDe ul{
+    margin-top: 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+.vendedorDe ul.opcoes,
+.produtoDe ul.opcoes,
+.estadoDe ul.opcoes,
+.clienteDe ul.opcoes{
+    border-radius: 0;
+    height: 360px;
+    overflow: auto;
+    margin: 0;
+}
+.vendedorDe ul li,
+.produtoDe ul li,
+.estadoDe ul li,
+.clienteDe ul li{
+    height: 40px;
+    line-height: 40px;
+}
+.vendedorDe ul.opcoes li,
+.produtoDe ul.opcoes li,
+.estadoDe ul.opcoes li,
+.clienteDe ul.opcoes li{
+    cursor: pointer;
+}
+.vendedorDe ul.opcoes li.active,
+.produtoDe ul.opcoes li.active,
+.estadoDe ul.opcoes li.active,
+.clienteDe ul.opcoes li.active{
+    background-color: #791f92;
+}
+.vendedorDe ul.opcoes li.active span,
+.produtoDe ul.opcoes li.active span,
+.estadoDe ul.opcoes li.active span,
+.clienteDe ul.opcoes li.active span{
+    color: white;
+}
+.vendedorDe ul li.off,
+.produtoDe ul li.off,
+.estadoDe ul li.off,
+.clienteDe ul li.off{
+    display: none;
+}
+.vendedorDe ul li:nth-child(even),
+.produtoDe ul li:nth-child(even),
+.estadoDe ul li:nth-child(even),
+.clienteDe ul li:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.vendedorDe ul li span,
+.produtoDe ul li span,
+.estadoDe ul li span,
+.clienteDe ul li span{
+    display: block;
+    width: 30%;
+    float: left;
+}
+.vendedorDe ul li span:last-of-type,
+.estadoDe ul li span:last-of-type,
+.produtoDe ul li span:last-of-type{
+    width: 70%;
+}
+.clienteDe ul li span:nth-child(2),
+.clienteDe ul li span:last-of-type{
+    width: 35%;
+}
+.vendedorDe button.todos,
+.produtoDe button.todos,
+.estadoDe button.todos,
+.clienteDe button.todos{
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    padding: 0 36px;
+}
+
+.vendedorDe button.limpar,
+.vendedorDe button.close,
+.produtoDe button.limpar,
+.produtoDe button.close,
+.estadoDe button.limpar,
+.estadoDe button.close,
+.clienteDe button.limpar,
+.clienteDe button.close{
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    padding: 0 36px;
+}
+.vendedorDe button.limpar,
+.produtoDe button.limpar,
+.estadoDe button.limpar,
+.clienteDe button.limpar{
+    right: 122px;
+}
+
+/** CANVAS **/
+
+#rFaturamento,
+#rVendedores{
+    margin-top: 16px;
+}
+
+
+/** TABELAS DOS RELATORIOS **/
+#tClientes tr td:nth-child(1),
+#tClientes tr td:nth-child(2),
+#tClientes tr td:nth-child(3){
+    display: none !important;
+}
+#tClientes tr td:nth-child(4){
+    padding-left: 16px;
+    text-transform: lowercase;
+    line-height: 40px;
+}
+#tClientes tr td:nth-child(5){
+    text-align: center;
+}
+
+
+/** Materialize alteracoes **/
+
+.collapsible{border: 0;margin: 0;box-shadow: none;}
+.collapsible-header,
+.collapsible-body{padding: 0;line-height: 40px;min-height: auto;border: 0;box-shadow: none;}
+.collapsible-header td,
+.collapsible-body td,
+#tabelao td{padding: 0;width: calc(100% / 14);border-radius: 0;line-height: 40px;font-size: 12px;letter-spacing: 1px;text-transform: uppercase;font-weight: bold;}
+.collapsible-body{padding: 0;}
+.collapsible-header.active{background-color: #F7931E;}
+.collapsible-header.active td{color: white;}
+.collapsible-body tr:hover{background-color: #F7931E;}
+.collapsible-body tr:hover td{color: white;}
+
+
+table{width: 100%;border: none;border-collapse: collapse;border-radius: 5px;overflow: hidden;}
+table thead,
+table tfoot{background-color: #a933cb;}
+table thead h6,
+table tfoot h6{color: white;line-height: 40px;padding: 0 16px;}
+table tbody h6{line-height: 40px;padding: 0 16px;}
+table tbody tr:nth-child(even){background-color: rgba(0,0,0,.15);}
+
+/** lista produtos **/
+
+table td.produto-codigo,
+table td.produto-data,
+table td.produto-status,
+table td.produto-preco{width: 100px;text-align: center;}
+table td.produto-setor{width: 200px;text-align: center;}
+
+/** lista ordens **/
+
+table td.ordem-codigo,
+table td.ordem-data,
+table td.ordem-status,
+table td.ordem-prazo{width: 100px;text-align: center;}
+table td.ordem-setor{width: 200px;text-align: center;}
+
+/** lista chamados **/
+
+table td.chamado-nome h6{max-width: 250px;}
+table td.chamado-codigo,
+table td.chamado-data,
+table td.chamado-status{width: 100px;text-align: center;}
+table td.chamado-setor{width: 200px;text-align: center;}
+table td.chamado-codigo a,
+table td.chamado-data a,
+table td.chamado-nome a{display: block;}
+
+/** lista usuários **/
+
+table td.usuario-codigo,
+table td.usuario-action{width: 100px;text-align: center;}
+table td.usuario-telefone,
+table td.usuario-empresa{width: 150px;text-align: center;}
+
+/** nps de marketing **/
+
+table td.pinterna-item,
+table td.pinterna-avaliacao{text-align: center;}
+table td.pinterna-avaliacao{vertical-align: top;}
+table td.pinterna-observacao h6{line-height: initial;padding: 6px 0;}
+
+/** rank de clientes **/
+
+table td.rCliente-receita{width: 150px;text-align: center;}
+
+/** rank de vendedores **/
+
+table td.rVendedores-ano{width: 100px;text-align: center;}
+table td.rVendedores-receita{width: 150px;text-align: center;}
+
+
+
+
+@media only screen and (min-width:1367px){}
+@media only screen and (min-width:993px){}
+@media only screen and (max-width:768px){
+    #topo .gatilho{
+        line-height: 50px;
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        margin: 15px 10px;
+        text-align: center;
+        border-radius: 25px;
+        color: white;
+    }
+}
+@media only screen and (max-width:480px){
+    #topo .menu{
+        visibility: hidden;
+        opacity: 0;
+        height: calc(100% - 160px);
+    }
+    #topo .menu ul li ul{
+        height: calc(100% - 160px);
+    }
+    #topo .menu.active{
+        visibility: visible;
+        opacity: 1;
+    }
+    #topo .logo{
+        top: 5px;
+        left: 70px;
+    }
+    #topo .perfil{
+        right: initial;
+        left: 0;
+        top: 80px;
+    }
+    #topo .perfil img{
+        right: initial;
+        left: 16px;
+    }
+    #topo .perfil h6{
+        float: left;
+        margin-right: 0;
+        margin-left: 72px;
+    }
+    #topo .perfil h6 a{
+        text-align: left;
+    }
+    #conteudo,
+    #conteudo.menu-active{
+        width: calc(100% - 6px);
+        height: calc(100% - 80px);
+        right: initial;
+        left: 6px;
+    }
+    #conteudo.propaganda{
+        padding-right: 16px;
+    }
+    #conteudo.mini-menu{
+        left: calc(100% - 30px);
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    #conteudo .head-title select{
+        float: none;
+        width: 100%;
+        margin: 16px auto;
+    }
+
+    #conteudo aside{
+        position: relative;
+        bottom: initial;
+        right: initial;
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        margin-top: 16px;
+    }
+    #conteudo aside img{
+        width: 100%;
+    }
+
+    #conteudo .chamado{width: 100%;}
+
+    #conteudo .chamado-chat{position: relative;top: initial;right: initial;width: 100%;height: auto;}
+    #conteudo .chamado-chat form input{width: 100% !important;float:none;}
+    #conteudo .chamado-chat form button{width: 100%;float:none;margin-top:16px;margin-left:0;}
+    #conteudo .perguntas.admin{margin-top: 16px;}
+
+    #conteudo .mini-info li{
+        float:none;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 16px;
+    }
+
+    #conteudo .pedidos-check,
+    #conteudo .pedidos-codigo,
+    #conteudo .pedidos-data,
+    #conteudo .pedidos-prazo,
+    #conteudo .pedidos-setor,
+    #conteudo .pedidos-status,
+    #conteudo .pedidos-valor{
+        display: block;float: left;
+        height: 30px;
+    }
+    #conteudo .pedidos-codigo{width: calc(100% - 40px);text-align: left;}
+    #conteudo .pedidos-action{
+        position: relative;
+        width: 50px;
+    }
+
+    
+    .faq-filter,
+    .faq-filter:focus{
+        display: block;
+        width: 100%;
+        float: none;
+        position: relative;
+        top: initial;
+        right: initial;
+        margin-top: 16px;
+    }
+    .grafico-container,
+    .tabela-container{width: 100%;float: none;margin-top: 16px;}
+
+    table,thead,tbody,tfoot,tr,td{
+        display: block;
+    }
+    table{width: 100%;}
+    table thead,
+    table tfoot,
+    table tr{
+        overflow: hidden;
+    }
+    table thead h6,
+    table tfoot h6,
+    table tbody h6{padding: 0 6px;}
+    table tbody td{position: relative;padding-top: 20px;}
+    table tbody tr:nth-child(even){background-color: transparent;}
+    table tbody tr:nth-child(odd){background-color: rgba(0,0,0,.15);}
+
+    table td.produto-codigo,
+    table td.produto-data,
+    table td.produto-setor,
+    table td.produto-status{width: 33.333%;float: left;}
+    table td.produto-status{text-align: right;}
+    table td.produto-codigo,
+    table td.produto-data{text-align: left;}
+    table td.produto-nome{width: 66.666%;float: left;}
+    table td.produto-preco{display: none;}
+    table td.produto-codigo::before{content:"Código";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.produto-data::before{content:"Data";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.produto-setor::before{content:"Setor";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.produto-status::before{content:"Status";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.produto-nome::before{content:"Produto";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+
+    table td.ordem-codigo,
+    table td.ordem-data,
+    table td.ordem-setor,
+    table td.ordem-status{width: 33.333%;float: left;}
+    table td.ordem-status{text-align: right;}
+    table td.ordem-codigo,
+    table td.ordem-data{text-align: left;}
+    table td.ordem-nome{width: 66.666%;float: left;}
+    table td.ordem-prazo{display: none;}
+    table td.ordem-codigo::before{content:"Código";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.ordem-data::before{content:"Data";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.ordem-setor::before{content:"Setor";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.ordem-status::before{content:"Status";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.ordem-nome::before{content:"Produto";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+
+    table td.chamado-codigo{width: 33.333%;float: left;}
+    table td.chamado-data,
+    table td.chamado-setor,
+    table td.chamado-status,
+    table td.chamado-cliente{width: 50%;float: left;}
+    table td.chamado-status{text-align: left;}
+    table td.chamado-cliente,
+    table td.chamado-setor{text-align: right}
+    table td.chamado-codigo,
+    table td.chamado-data{text-align: left;}
+    table td.chamado-nome{width: 66.666%;float: left;}
+    table td.chamado-codigo::before{content:"Código";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.chamado-data::before{content:"Data";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.chamado-status::before{content:"Status";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.chamado-nome::before{content:"Título";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.chamado-setor::before{content:"Setor";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;text-align: right;}
+    table td.chamado-cliente::before{content:"Cliente";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;text-align: right;}
+
+    table td.rCliente-nome{width: 70%;float: left;position: relative;}
+    table td.rCliente-receita{width: 30%;float: left;text-align: right;position: relative;}
+    table td.rCliente-nome::before{content:"Nome do Cliente";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.rCliente-receita::before{content:"Receita";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+
+    table td.pinterna-item{width: 33.333%;float: left;position: relative;}
+    table td.pinterna-item:nth-child(odd){background-color: white;}
+    table td.pinterna-item.zero::before,
+    table td.pinterna-item.um::before,
+    table td.pinterna-item.dois::before,
+    table td.pinterna-item.tres::before,
+    table td.pinterna-item.quatro::before,
+    table td.pinterna-item.cinco::before,
+    table td.pinterna-item.seis::before,
+    table td.pinterna-item.sete::before,
+    table td.pinterna-item.oito::before,
+    table td.pinterna-item.nove::before,
+    table td.pinterna-item.dez::before{content:"Nota 0";width:100%;position: absolute;top: 0;left:0;line-height: 30px;color: #a933cb;text-transform: uppercase;letter-spacing: 1px;font-size: 12px;font-weight: bold;padding: 0 6px;box-sizing:border-box;}
+    table td.pinterna-item.um::before{content:"Nota 1";}
+    table td.pinterna-item.dois::before{content:"Nota 2";}
+    table td.pinterna-item.tres::before{content:"Nota 3";}
+    table td.pinterna-item.quatro::before{content:"Nota 4";}
+    table td.pinterna-item.cinco::before{content:"Nota 5";}
+    table td.pinterna-item.seis::before{content:"Nota 6";}
+    table td.pinterna-item.sete::before{content:"Nota 7";}
+    table td.pinterna-item.oito::before{content:"Nota 8";}
+    table td.pinterna-item.nove::before{content:"Nota 9";}
+    table td.pinterna-item.dez::before{content:"Nota 10";}
+
+    table td.pinterna-avaliacao{padding: 0 6px;}
+    table td.pinterna-observacao{padding-top: 0;}
+    table td.pinterna-observacao h6{padding: 6px;}
+
+    #abrirChamado,
+    #novaFaq,
+    #novoCliente,
+    #filtro{width: 100%;}
+    #chamado-copia{height: 100px !important;}
+    
+    #datacenter li{width: 50%;}
+    #datacenter li i{height: 60px;line-height: 60px;font-size: 60px;}
+
+}

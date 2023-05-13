@@ -1,0 +1,48 @@
+#blog{padding: 60px 10%;overflow: hidden;}
+#blog form.busca{width: 100%;margin: 0 auto;overflow: hidden;margin-bottom: 60px;background-color: white;border-radius: 5px;padding: 16px;box-sizing: border-box;}
+#blog form.busca input{height: 50px !important;font-size: 18px;color:#673ab7;}
+#blog form.busca button{width:100%;height: 50px;line-height: 50px;border-radius: 5px;background-color: #673ab7;font-size: 18px;color:white;outline: none;text-align: center;margin-top: 10px;}
+#blog form.busca button:hover{background-color: #4a148c;}
+#blog .anuncio{float: right;width: 300px;}
+#blog .anuncio img{display: block;margin: 0 auto;border-radius: 10px;box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, .15);}
+#blog .anuncio img:hover{box-shadow: 0px 10px 20px -5px rgba(103, 58, 183, .5);}
+#blog .posts{width: calc(100% - 316px);float: left;}
+#blog .posts article{overflow: hidden;margin-bottom: 16px;background-color: white;border-radius: 5px;}
+#blog .posts article a{display: block;}
+#blog .posts article figure{width: 250px;height: 250px;overflow: hidden;position: relative;float: left;margin: 0;margin-right: 16px;border-radius: 5px;}
+#blog .posts article figure img{height: 100%;display: block;position: absolute;top: 0;left: 50%;transform: translateX(-50%);}
+#blog .posts article header{float: left;width: calc(100% - 266px);padding-right: 16px;}
+#blog .posts article header .categoria{border-radius: 5px;display: inline-block;line-height: 30px;padding: 0 16px;background-color: #673ab7;color: white;font-size: 14px;margin-top: 26px;}
+#blog .posts article header h2{font-size: 28px;margin-top: 10px;margin-bottom: 0;color: #673ab7;font-weight: bold;}
+#blog .posts article header h6{color: #673ab7;}
+#blog .posts article p{float: left;width: calc(100% - 266px);margin-top: 16px;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;padding-right: 16px;box-sizing: border-box;color: #666;}
+#blog .posts .paginacao{overflow: hidden;text-align: center;margin-top: 50px;}
+#blog .posts .paginacao h6{line-height: 30px;}
+#blog .posts .paginacao ul li{display: inline-block;border-radius: 5px;background-color: #ededed;color: #666;font-size: 14px;padding: 5px 10px;cursor: pointer;margin: 0 5px;}
+#blog .posts .paginacao ul li.active{background-color: #673ab7;color: white;font-weight: bold;}
+
+@media only screen and (max-width:768px){
+    #blog{padding: 30px 5%;}
+    #blog .posts{width: 100%;float: none;}
+    #blog .anuncio{display: none;}
+}
+
+@media only screen and (max-width:480px){
+    #blog{padding: 6px;}
+    #blog form.busca{width: 100%;margin-bottom: 30px;}
+    #blog form.busca button,
+    #blog form.busca input{width: 100% !important;height:60px !important;float: none;line-height: 60px;font-size: 24px;}
+    #blog form.busca button{margin-top: 16px;}
+    #blog .posts article{padding-bottom: 10px;}
+    #blog .posts article figure,
+    #blog .posts article header,
+    #blog .posts article p{float: none;width: 100%;}
+    #blog .posts article header{padding: 0 16px;}
+    #blog .posts article header .categoria{margin: 0;}
+    #blog .posts article p{padding: 0 16px;}
+    #blog .posts article figure{margin-bottom: 16px;}
+    #blog .posts article header h2{line-height: 30px;margin-bottom: 10px;}
+    #blog .anuncio,
+    #blog .relacionados,
+    #blog .newslatter{width: 100%;float: none;padding: 6px;}
+}

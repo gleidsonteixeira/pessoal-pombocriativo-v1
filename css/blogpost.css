@@ -1,0 +1,88 @@
+#blog .post{width: 100%;}
+#blog .post article{overflow: hidden;margin-bottom: 26px;padding-top: 26px;}
+#blog .post article figure{width: 80%;overflow: hidden;position: relative;margin: 0 auto;padding: 0 70px;background-color: white;}
+#blog .post article figure img{width: 100%;display: block;border-radius: 5px;}
+#blog .post article header{width: 80%;margin: 0 auto;background: white;padding: 16px 50px;box-sizing: border-box;border-radius: 10px 10px 0 0;}
+#blog .post article header .categoria{border-radius: 5px;display: inline-block;line-height: 30px;padding: 0 16px;}
+#blog .post article header h1{font-size: 36px;line-height: 44px;color: #673ab7;font-weight: bold;margin-bottom: 0;}
+#blog .post article header h6{margin-bottom: 16px;height: 50px;color: #673ab7;position: relative;padding-top: 12px;padding-left: 60px;}
+#blog .post article header figure{position:absolute;left: 0;top: 0;width: 50px;height:50px;overflow: hidden;border-radius: 30px;padding: 0;}
+#blog .post article header figure img{width: 100%;}
+#blog .post article header p{font-size: 22px;font-weight: bold;line-height: 28px;}
+#blog .post article h3{font-weight: bold;font-size: 28px;margin-top: 16px;}
+#blog .post article p{overflow: hidden;box-sizing: border-box;font-size: 18px;margin: 16px 0;}
+#blog .post article .conteudo{width: 80%;margin: 0 auto;background: white;padding: 16px 50px;box-sizing: border-box;border-radius: 0 0 10px 10px;}
+#blog .post article .conteudo h2{font-size: 28px;font-weight: bold;margin-top: 50px;}
+#blog .post article .conteudo p{color: #666;}
+#blog .post article .conteudo ul,
+#blog .post article .conteudo ol{list-style: initial;padding-left: 20px;}
+#blog .post article .conteudo ul li,
+#blog .post article .conteudo ol li{list-style: initial;}
+#blog .post article .conteudo ul li p,
+#blog .post article .conteudo ol li p{margin: 0;}
+#blog .post article .conteudo figure{width: 900px;margin:0 auto;display: block;padding: 0;}
+#blog .post article blockquote{color: #999;border-left: 3px solid #673ab7;padding: 26px 20px;font-style: italic;position: relative;font-weight: bold;}
+#blog .post article blockquote::before{content:'"';position:absolute;top:0;left:4px;font-size:50px;line-height: 45px;}
+#blog .post article .marcadores{margin: 26px 0;}
+#blog .post article .marcadores span{display: block;font-size: 12px;color: #666;margin-bottom: 6px;}
+#blog .post article .marcadores h6{border-radius: 5px;display: inline-block;line-height: 30px;padding: 0 16px;background-color: #673ab7;color: white;margin: 0 10px 10px 0;}
+#blog .post article .avaliacao{display: block;text-align: center;background-color: #ededed;border-radius: 5px;padding: 16px 0;}
+#blog .post article .avaliacao p{margin-top: 0;}
+#blog .post article .avaliacao i{display: inline-block;width:50px;height:50px;line-height:50px;text-align: center;background-color: rgba(0, 0, 0, .15);border-radius: 25px;}
+#blog .post article .avaliacao i:hover{background-color: #673ab7;color: white;}
+#blog .post article .avaliacao .agradecer{display: none;text-align: center;width: 100%;}
+#blog .post article .avaliacao .agradecer.active{display: block;}
+#blog .post .aviso{padding: 16px;border-radius: 5px;background-color: rgba(103, 58, 183,.15);margin: 10px 0;}
+#blog .newslatter{width: 80%;box-sizing: border-box;padding: 50px 16px;background-color: #673ab7;margin: 50px auto;border-radius: 10px;}
+#blog .newslatter h2{font-size: 18px;line-height:22px;text-align: center;margin: 0;color: #673ab7;font-weight: bold;}
+#blog .newslatter p{text-align: center;color: #999;margin: 16px 0;}
+#blog .newslatter input{margin-bottom:16px !important;}
+#blog .newslatter button{display: block;background-color: #673ab7;border-radius:5px;width: 100%;}
+#blog .newslatter button:hover{background-color: #4a148c;}
+#blog .relacionados{width: 100%;box-sizing: border-box;overflow: hidden;padding: 0 10%;padding-bottom: 50px;}
+#blog .relacionados ul li{overflow: hidden;width: calc(25% - 16px);margin: 0 8px;float: left;background-color: white;border-radius: 5px;}
+#blog .relacionados ul li a{display: block;}
+#blog .relacionados ul li figure{width: 100%;height: 192px;position: relative;overflow: hidden;border-radius: 5px 5px 0 0;margin: 0;margin-right: 16px;}
+#blog .relacionados ul li figure img{height: 100%;position: absolute;top: 0;left: 50%;transform: translateX(-50%);}
+#blog .relacionados ul li h6{font-size: 18px;font-weight: 500;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;padding: 0 16px;color: #333;margin-bottom: 16px;margin-top: 16px;}
+#blog .relacionados ul li h6:hover{color: #673ab7;}
+#newsletter{padding: 60px 10%;background-color: #4a148c;overflow: hidden;}
+#newsletter .conteudo{float: left;width: 40%;}
+#newsletter h3{font-weight: bold;color: white;margin-top: 70px;}
+#newsletter p{color: white;}
+
+@media only screen and (max-width:768px){
+    #blog .relacionados{padding: 0 5%;}
+    #newsletter{padding: 30px 5%;}
+    #newsletter h3{margin-top: initial;}
+    #blog .relacionados ul li{width: calc(50% - 16px);}
+}
+
+@media only screen and (max-width:480px){
+    #blog .post{width: 100%;float: none;}
+    #blog .post article figure,
+    #blog .post article header,
+    #blog .post article p{float: none;width: 100%;}
+    #blog .post article header{padding: 0 16px;padding-bottom: 16px;}
+    #blog .post article .conteudo{width: 100%;margin: 0;padding: 0 16px;}
+    #blog .post article header h1{line-height: 30px;margin-bottom: 10px;font-size: 24px;margin-top: 0;}
+    #blog .post article header p{font-size: 16px;}
+    #blog .post article .conteudo h2{font-size: 18px;margin: initial;}
+    #blog .post article h3{font-size: 20px;}
+    #blog .post article p{font-size: 14px;}
+    #blog .post article blockquote{font-size: 14px;}
+    #blog .post article figure{padding: 0 6px;}
+    #blog .post article .conteudo figure{width: 100%;}
+    #blog .post article .conteudo figure img{width: 100% !important;height: auto !important;}
+    #blog .aviso{font-size: 14px;}
+    #blog .relacionados ul li{width: 100%;float: none;margin: 0;margin-bottom: 16px;}
+    #blog .anuncio,
+    #blog .relacionados,
+    #blog .newslatter{width: 100%;float: none;padding: 26px;}
+    #blog .relacionados ul li figure{height: 260px;}
+    #newsletter{padding: 16px;}
+    #newsletter .conteudo{float: none;width: 100%;}
+    #newsletter h2{font-size: 36px;text-align: center;}
+    #newsletter h3{margin-top: 16px;}
+    #newsletter p{text-align: justify;}
+}

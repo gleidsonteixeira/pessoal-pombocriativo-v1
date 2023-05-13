@@ -1,0 +1,10 @@
+body{background-color: #673ab7;}
+.obrigado{width: 400px;position: relative;top: 0;left: 50%;transform: translate(-50%,20%);text-align: center;}
+.obrigado img{margin: 0 auto;display: block;}
+.obrigado h5{font-size: 22px;color: white;}
+.obrigado a{background-color: #4a148c;margin-top: 16px;}
+.obrigado a:hover{background-color: #18ffff;}
+
+@media only screen and (max-width:480px){
+    .obrigado{width: 100%;transform: translate(-50%,5%);}
+}

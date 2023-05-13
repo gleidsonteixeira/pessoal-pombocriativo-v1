@@ -1,0 +1,37 @@
+#sobre{overflow: hidden;padding: 60px 10%;}
+#sobre h2{font-size: 48px;text-align: center;margin-bottom: 26px;}
+#sobre p{text-align: left;font-size: 18px;line-height: 28px;margin-bottom: 16px;}
+#sobre img{display: block;}
+#sobre .conteudo{width: 80%;margin: 0 auto;background-color: white;border-radius: 10px;padding: 16px 50px 50px 50px;}
+#sobre .conteudo img{margin: 0 auto;margin-top: 30px;width: 250px;}
+#sobre .imagem{display: block;float: left;width: 50%;}
+#sobre .imagem img{display: block;margin: 0 auto;}
+#sobre ul{overflow: hidden;}
+#sobre ul li{width: calc(33.333% - 16px);float: left;margin: 16px 8px;background-color: white;border-radius: 10px;padding: 16px;box-sizing: border-box;text-align: center;}
+#sobre ul li:hover{background-color: #673ab7;}
+#sobre ul li h5{color: #673ab7;}
+#sobre ul li:hover h5{color: white;}
+#sobre ul li p{text-align: center;height: 85px;}
+#sobre ul li:hover p{color:white;}
+#sobre ul li figure{width: 100px;margin: 50px auto;position: relative;z-index: 1;}
+#sobre ul li figure::before{content: "";position: absolute;top: 0;z-index:-1;left: 30%;transition-duration: .2s;}
+#sobre ul li:hover figure::before{left:-30%;}
+#sobre ul li:nth-child(1) figure::before{width: 90px;height: 100px;background-color: #18ffff;}
+#sobre ul li:nth-child(2) figure::before{width: 100px;height: 100px;border-radius: 50px;background-color: #18ffff;}
+#sobre ul li:nth-child(3) figure::before{border-left: 50px solid transparent;border-right: 50px solid transparent;border-bottom: 100px solid #18ffff;}
+#sobre ul li:hover figure img{filter: brightness(5);}
+
+@media only screen and (max-width:768px){
+    #sobre{padding: 30px 5%;}
+    #sobre .conteudo{width: 100%;}
+    #sobre ul li{float: none;width: 100%;margin: 0;margin-top: 16px;}
+    #sobre ul li p{height: auto;}
+}
+
+@media only screen and (max-width:480px){
+    #sobre{padding: 6px;}
+    #sobre .conteudo{padding: 16px;width: 100%;}
+    #sobre .conteudo h2{font-size: 36px;display: none;}
+    #sobre .conteudo p{font-size: 16px;text-align: justify;}
+    #sobre ul li{width: 100%;margin: 0;margin-bottom: 16px;float: none;}
+}

@@ -1,0 +1,299 @@
+#topo{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#topo .logo{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#topo .logo img{
+    display: block;
+}
+#topo .perfil{
+    width: 250px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#topo .perfil img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    border-radius: 20px;
+}
+#topo .perfil h6{
+    color: white;
+    float: right;
+    margin-right: 72px;
+    margin-top: 18px;
+}
+#topo .perfil h6 a{
+    display: block;
+    text-align: right;
+    text-transform: none;
+    color: white;
+}
+#topo .menu{
+    width: 70px;
+    height: calc(100vh - 70px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#topo .menu ul li{
+    width: 70px;
+    height: 40px;
+    position: relative;
+    margin-bottom: 6px;
+}
+#topo .menu ul li::before{
+    content: "";
+    width: 55px;
+    height: 40px;
+    background-color: rgba(255,255,255,.15);
+    position: absolute;
+    top: calc(50% - 20px);
+    left: -55px;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 0 20px 20px 0;
+    z-index: -1;
+    will-change: auto;
+}
+#topo .menu ul li.active::before,
+#topo .menu ul li:hover::before{
+    left: 0;
+}
+#topo .menu ul li.active::before{
+    background-color: white;
+}
+#topo .menu ul li.active::after{
+    content: "";
+    width: 10px;
+    height: 20px;
+    background-color: rgba(255,255,255,.25);
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 1px;
+    border-radius: 10px 0 0 10px;
+}
+#topo .menu ul li a{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: block;
+    margin: 0 15px;
+}
+#topo .menu ul li a i{
+    color: white;
+    line-height: 40px;
+    font-size: 22px;
+    display: block;
+    position: relative;
+    will-change: auto;
+}
+#topo .menu ul li.active a i{
+    color: #a933cb;
+}
+#topo .menu ul li ul{
+    width: 250px;
+    height: calc(100vh - 70px);
+    position: fixed;
+    bottom: 0;
+    left: 70px;
+}
+#topo .menu ul li ul::before{
+    content: "";
+    width: 1px;
+    height: calc(100% - 16px);
+    background-color: rgba(255,255,255,.25);
+    position: absolute;
+    top: 0;
+    right: 100%;
+}
+#topo .menu ul li ul li{
+    width: 100%;
+}
+#topo .menu ul li ul li a{
+    width: calc(100% - 16px);
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    letter-spacing: 1px;
+    display: block;
+    border-radius: 4px;
+    margin: 0;
+    margin-left: 16px;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+#topo .menu ul li ul li a:hover{
+    background-color: rgba(255,255,255,.15);
+}
+#topo .menu ul li ul li.active a{
+    background-color: white;
+    color: #a933cb;
+}
+#topo .menu ul li ul li::before,
+#topo .menu ul li ul li::after{
+    display: none;
+}
+
+#conteudo{
+    width: calc(100% - 70px);
+    height: calc(100% - 70px);
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    border-radius: 5px 0 0 0;
+    z-index: 2;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,.3);
+    padding: 16px;
+    box-sizing: border-box;
+}
+#conteudo.menu-active{
+    width: calc(100% - 336px);
+}
+#conteudo .head-title{
+    margin-bottom: 16px;
+}
+#conteudo .table{
+    width: 100%;
+    display: table;
+    position: relative;
+    margin-bottom: 40px;
+}
+#conteudo .table .head-row,
+#conteudo .table .table-row{
+    display: table-row;
+}
+#conteudo .table .table-row:nth-child(odd){
+    background-color: rgba(0,0,0,.15);
+}
+#conteudo .table .foot-row{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+}
+#conteudo .table .head-row h6,
+#conteudo .table .table-row h6{
+    display: table-cell;
+    line-height: 40px;
+    padding: 0 6px;
+}
+#conteudo .table .head-row h6,
+#conteudo .table .foot-row h6{
+    color: white;
+}
+#conteudo .table .head-row h6:first-child{
+    border-radius: 5px 0 0 0;
+}
+#conteudo .table .head-row h6:last-child{
+    border-radius: 0 5px 0 0;
+}
+#conteudo .table .foot-row h6{
+    line-height: 40px;
+    padding: 0 6px;
+}
+#conteudo .table .foot-row h6.passador{
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 0;
+}
+#conteudo .table .foot-row h6.passador i.prev,
+#conteudo .table .foot-row h6.passador i.next{
+    width: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    color: white;
+    display: block;
+    float: left;
+    text-align: center;
+    margin: 5px;
+    border-radius: 15px;
+}
+#conteudo .table .foot-row h6.passador i.prev:hover,
+#conteudo .table .foot-row h6.passador i.next:hover{
+    background-color: rgba(0,0,0,.15);
+}
+#conteudo .table .foot-row h6.passador span{
+    color: white;
+    display: block;
+    float: left;
+    width: 80px;
+    text-align: center;
+}
+
+
+#conteudo .pedidos-codigo,
+#conteudo .pedidos-data,
+#conteudo .pedidos-prazo,
+#conteudo .pedidos-setor,
+#conteudo .pedidos-status,
+#conteudo .pedidos-valor{
+    text-align: center;
+}
+#conteudo .pedidos-action{
+    position: relative;
+    width: 50px;
+}
+#conteudo .pedidos-action i{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+}
+#conteudo .pedidos-action i:hover{
+    background-color: rgba(0,0,0,.15);
+}
+#conteudo .pedidos-check{
+    text-align: center;
+    padding: 0 !important;
+    width: 40px;
+}
+#conteudo .pedidos-check input{
+    margin: 0 auto;
+    margin-top: 4px;
+    display: block;
+}
+
+#conteudo #acoesEmMassa{
+    padding: 16px;
+}
+#conteudo #acoesEmMassa h6{display: inline-block;}
+#conteudo #acoesEmMassa select{
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0 16px;
+    display: inline-block;
+}
+#conteudo #acoesEmMassa button{
+    display: inline-block;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+#conteudo #acoesEmMassa button b{
+    color: white;
+}

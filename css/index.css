@@ -1,0 +1,119 @@
+#banner-carrosel{overflow: hidden;position: relative;}
+#banner-carrosel .slides{overflow: hidden;}
+#banner-carrosel ul{overflow: hidden;padding:16px 0 16px 10%;width: auto;position: relative;}/*width: 2350px;*/
+#banner-carrosel ul li{width: 320px;height: 480px;box-sizing: border-box;float: left;margin-right: 16px;position: relative;border-radius: 10px;}
+#banner-carrosel ul li a{display: block;}
+#banner-carrosel ul li a figure{position: absolute;top: 0;left: 0;width: 100%;height: 100%;padding: 0;margin: 0;overflow: hidden;border-radius: 10px;}
+#banner-carrosel ul li a figure img{height: 100%;position: relative;top: 0;left: 50%;transform: translateX(-50%);display: block;}
+#banner-carrosel ul li a h3{position: absolute;bottom: 0;left: 0;width: 100%;padding: 16px;margin: 0;font-size: 18px;letter-spacing: 1px;color: white;z-index: 3;border-radius: 0 0 10px 10px;background-color: #673ab7;line-height: 22px;}
+#banner-carrosel ul li:hover a h6,
+#banner-carrosel ul li:hover a h3{background-color: #ffc400;}
+#banner-carrosel ul li a h3 b{text-decoration: underline;}
+#banner-carrosel ul li a h6{position: absolute;top: 16px;left: 16px;padding: 6px 16px;margin: 0;z-index: 3;background-color: #4a148c;color: white;border-radius:5px;}
+#banner-carrosel .prev,
+#banner-carrosel .next{width: 50px;height:50px;position: absolute;top: calc(50% - 25px);left: 40px;border-radius: 25px;z-index: 5;background-color: #673ab7;}
+#banner-carrosel .next{left: initial;right: 40px;}
+#banner-carrosel .prev::before,
+#banner-carrosel .next::before{content:"";width: 0;height:0;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);background-color: #4a148c;border-radius: 25px;transition-duration: .3s;}
+#banner-carrosel .prev:hover::before,
+#banner-carrosel .next:hover::before{width: 50px;height:50px;}
+#banner-carrosel .prev i,
+#banner-carrosel .next i{width: 50px;text-align: center;line-height: 50px;font-size: 30px;color: white;position: relative;z-index: 1;}
+#quem{padding: 80px 10%;background-color: white;position: relative;}
+#quem h2{font-size: 48px;color: #4a148c;font-weight: 600;}
+#quem p{width: 480px;margin-bottom: 16px;}
+#quem figure{position: absolute;top: calc(50% - 170px);right: 10%;}
+#servicos{padding: 60px 10%;box-sizing: border-box;position: relative;overflow: hidden;}
+#servicos h2{font-size: 48px;text-align: center;margin-bottom: 60px;color: #4a148c;font-weight: 600;}
+#servicos ul{overflow: hidden;}
+#servicos ul li{width: 50%;float: left;box-sizing: border-box;overflow: hidden;padding: 16px;padding-left: 116px;position: relative;}
+#servicos ul li figure{width: 100px;height:100px;margin: 0;position: absolute;top: 0;left: 0;}
+#servicos ul li figure::before{content: "";width: 60px;height: 90px;background-color: #18ffff;position: absolute;left: 10px;top: calc(50% - 30px);transition-duration: .3s;border-radius: 10px;transition-timing-function: cubic-bezier(1, -1.29, 0, 2.77);}
+#servicos ul li:hover figure::before{background-color: #ffc400;left: 40%;top: 10px;}
+#servicos ul li figure img{display: block;width: 100%;position: relative;z-index: 1;}
+#servicos ul li h6{padding: 6px 16px;background-color: #4a148c;color: #18ffff;border-radius: 5px;display: inline-block;}
+#servicos ul li h5{color: #4a148c;font-weight: 600;margin: 0;margin-bottom: 16px;font-size: 28px;}
+#servicos ul li p{font-size: 16px;color: #444;}
+#servicos ul li p span{display: block;line-height: 30px;font-size: 14px;color:#4a148c;font-style:italic;text-align: right;width: 100%;font-weight: bold;}
+#portfolio{padding: 60px 10%;position: relative;overflow: hidden;background-color: white;}
+#portfolio h2{font-size: 48px;text-align: center;margin-bottom: 60px;color: #4a148c;font-weight: 600;}
+#portfolio ul{overflow: hidden;}
+#portfolio ul li{width: calc(33.333% - 16px);float: left;position: relative;overflow: hidden;background-color: white;margin: 0 8px 26px 8px;}
+#portfolio ul li h3{color: #4a148c;font-weight: 600;margin: 0;margin-bottom: 10px;font-size: 24px;}
+#portfolio ul li:hover h3{color: #ffc400;}
+#portfolio ul li h6{color: #4a148c;margin-bottom: 0;margin-top: 16px;}
+#portfolio ul li figure{width: 130px;float: left;margin-right: 16px;}
+#portfolio ul li figure img{width: 100%;display: block;}
+#portfolio ul li p{color: #444;;line-height: 24px;margin-bottom: 26px;}
+#portfolio ul li a{display: inline-block;line-height: 22px;border-radius: 5px;position: relative;font-weight: bold;padding-right: 10px;}
+#portfolio ul li a::before{content: "";width: 0;height: 2px;background-color: #673ab7;transition-duration: .2s;position: absolute;left: 0;top: 100%;}
+#portfolio ul li:hover a::before{width: 100%;}
+#newsletter{padding: 60px 10%;background-color: #4a148c;overflow: hidden;}
+#newsletter .conteudo{float: left;width: 40%;}
+#newsletter h3{font-weight: bold;color: white;margin-top: 70px;}
+#newsletter p{color: white;}
+#last-blog{padding: 60px 10%;background-color: white;}
+#last-blog .posts{overflow: hidden;}
+#last-blog .posts article{overflow: hidden;background-color: white;border-radius: 5px;width: calc(50% - 16px);float: left;margin: 0 8px;margin-bottom: 16px;}
+#last-blog .posts article a{display: block;}
+#last-blog .posts article figure{width: 160px;height: 160px;overflow: hidden;position: relative;float: left;margin: 0;margin-right: 16px;border-radius: 5px;}
+#last-blog .posts article figure img{height: 100%;display: block;position: absolute;top: 0;left: 50%;transform: translateX(-50%);}
+#last-blog .posts article header{float: left;width: calc(100% - 176px);}
+#last-blog .posts article header .categoria{border-radius: 5px;display: inline-block;line-height: 22px;padding: 0 16px;background-color: #673ab7;color: white;font-size: 14px;margin-top: 16px;}
+#last-blog .posts article header h2{font-size: 24px;margin-top: 0;margin-bottom: 0;color: #4a148c;font-weight: bold;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+#last-blog .posts article:hover header h2{color: #ffc400;}
+#last-blog .posts article p{float: left;width: calc(100% - 176px);margin-top: 8px;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;padding-right: 16px;box-sizing: border-box;color: #999;}
+
+@media only screen and (max-width:768px){
+    #quem{padding: 30px 5%;}
+    #quem p{width: 100%;}
+    #quem figure{width: 100%;position: relative;right: initial;top: initial;width: 60%;margin: 16px auto;}
+    #quem figure img{width: 100%;}
+    #servicos{padding: 30px 5%;}
+    #servicos ul li{float: none;width: 70%;padding: 16px 0;margin: 0 auto;}
+    #servicos ul li figure{left: initial;right: 0;top: 10px;}
+    #servicos ul li h5{padding-right: 80px;min-height: 60px;}
+    #portfolio{padding: 30px 5%;}
+    #portfolio ul li{width: calc(50% - 16px);}
+    #newsletter{padding: 30px 5%;}
+    #newsletter h3{margin-top: initial;}
+    #last-blog{padding: 30px 5%;}
+    #last-blog .posts article{width: 70%;margin: 0 auto 16px auto;float:none;}
+}
+
+@media only screen and (max-width:480px){
+    #banner-carrosel .prev,
+    #banner-carrosel .next{display: none;}
+    #banner-carrosel .slides{overflow: auto;}
+    #banner-carrosel ul{padding-left: 16px;}
+    #banner-carrosel ul li{width: 260px;height: 400px;}
+    #banner-carrosel ul li a h3{font-size: 16px;}
+    #quem{padding: 16px;}
+    #quem h2{font-size: 36px;text-align: center;}
+    #quem p{width: 100%;}
+    #quem figure{width: 100%;position: relative;right: initial;top: initial;}
+    #quem figure img{width: 100%;}
+    #servicos{padding: 0 16px;}
+    #servicos h2{font-size: 36px;margin-bottom: 20px;}
+    #servicos ul li{width: 100%;}
+    #portfolio{padding: 16px;}
+    #portfolio h2{font-size: 36px;margin-bottom: 16px;}
+    #portfolio ul li{width: 100%;float: none;margin-left: 0;margin-right: 0;}
+    #newsletter{padding: 16px;}
+    #newsletter .conteudo{float: none;width: 100%;}
+    #newsletter h2{font-size: 36px;text-align: center;}
+    #newsletter h3{margin-top: 16px;}
+    #newsletter p{text-align: justify;}
+    #last-blog{padding: 16px;}
+    #last-blog .posts{width: 100%;}
+    #last-blog .posts article{padding-bottom: 10px;width: 100%;float: none;margin: 0 0 16px 0;}
+    #last-blog .posts article figure,
+    #last-blog .posts article header,
+    #last-blog .posts article p{float: none;width: 100%;}
+    #last-blog .posts article header{padding: 0 16px;}
+    #last-blog .posts article header .categoria{margin: 0;}
+    #last-blog .posts article p{padding: 0 16px;}
+    #last-blog .posts article figure{margin-bottom: 16px;}
+    #last-blog .posts article figure img{width: 100%;height: auto;}
+    #last-blog .posts article header h2{line-height: 30px;margin-bottom: 10px;}
+}

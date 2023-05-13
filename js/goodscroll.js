@@ -1,0 +1,1 @@
+(function($){"use strict";$("a.scrollto[href^='#']").on('click',function(e){e.preventDefault();var hash=this.hash;$('html, body').stop().animate({scrollTop:$(hash).offset().top-30},1200,'easeInOutExpo');});})(jQuery);
